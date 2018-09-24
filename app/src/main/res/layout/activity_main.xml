@@ -1,14 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <FrameLayout
-        android:id="@+id/Frame_Layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"> </FrameLayout>
 
-</android.support.constraint.ConstraintLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/View_Pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </android.support.v4.view.ViewPager>
+
+
+
+
+    <RelativeLayout
+        android:layout_height="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:id="@+id/Header">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/My_Account_Button"
+            android:layout_marginLeft="24dp"
+            android:textSize="12dp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:text="MY ACCOUNT"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:background="@drawable/ic_filter_list_black_24dp"
+            android:id="@+id/Filters_Button"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="24dp"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/Discover_More_Button"
+        android:layout_height="32dp"
+        android:layout_width="150dp"
+        android:layout_marginBottom="32dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_rectangle"
+
+        android:textSize="10dp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:text="DISCOVER MORE"
+        />
+
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        />
+
+
+</RelativeLayout>

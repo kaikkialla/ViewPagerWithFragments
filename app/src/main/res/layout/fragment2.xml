@@ -46,22 +46,9 @@
 
     </RelativeLayout>
 
-    <Button
-        android:id="@+id/Discover_More_Button"
-        android:layout_height="32dp"
-        android:layout_width="150dp"
-        android:layout_marginBottom="32dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/rounded_rectangle"
-
-        android:textSize="10dp"
-        android:textColor="#000"
-        android:textStyle="bold"
-        android:text="DISCOVER MORE"
-        />
 
 
+    <!--
     <RelativeLayout
         android:layout_height="?attr/actionBarSize"
         android:layout_width="match_parent"
@@ -89,5 +76,5 @@
             android:layout_alignParentRight="true"/>
 
     </RelativeLayout>
-
+-->
 </RelativeLayout>
