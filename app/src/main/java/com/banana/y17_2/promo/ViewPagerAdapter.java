@@ -16,6 +16,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int i) {
         switch (i){
             case 0:
+
                 return new Fragment2();
             case 1:
                 return new Fragment2();
