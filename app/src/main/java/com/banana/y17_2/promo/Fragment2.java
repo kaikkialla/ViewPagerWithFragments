@@ -13,6 +13,11 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.logging.Handler;
+import java.util.logging.LogRecord;
+
 public class Fragment2 extends Fragment{
 
     RelativeLayout Root_Container;
@@ -43,6 +48,7 @@ public class Fragment2 extends Fragment{
         //My_Account_Button = view.findViewById(R.id.My_Account_Button);
         //Filters_Button = view.findViewById(R.id.Filters_Button);
         //Discover_More_Buton = view.findViewById(R.id.Discover_More_Button);
+
 
 
 
