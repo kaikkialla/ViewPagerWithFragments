@@ -48,6 +48,7 @@
         <ImageView
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
+            android:transitionName="banana"
             android:background="@drawable/ic_filter_list_black_24dp"
             android:id="@+id/Filters_Button"
             android:layout_centerVertical="true"
@@ -75,6 +76,7 @@
         android:id="@+id/indicator"
         android:layout_width="match_parent"
         android:layout_height="48dp"
+        app:ci_animator="@animator/scale_with_alpha"
         />
 
 

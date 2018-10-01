@@ -1,5 +1,8 @@
 package com.banana.y17_2.promo;
 
+import android.app.ActivityOptions;
+import android.content.Intent;
+import android.os.Build;
 import android.os.Handler;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -41,13 +44,19 @@ public class MainActivity extends AppCompatActivity {
         Filters_Button = findViewById(R.id.Filters_Button);
         Discover_More_Button = findViewById(R.id.Discover_More_Button);
 
-        viewPager.setPageTransformer(true, new ZoomOutPageTransformer());
+        //viewPager.setPageTransformer(true, new ZoomOutPageTransformer());
         swipeImage();
 
-        findViewById(R.id.Root_container).setOnClickListener(new View.OnClickListener() {
+        Discover_More_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                swipeTimer.cancel();
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                    final ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, Filters_Button, "banana");
+                    final Bundle bundle = options.toBundle();
+
+                    startActivity(intent, bundle);
+                }
             }
         });
 
@@ -83,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }, 5000, 5000);
     }
-
+/*
     public class ZoomOutPageTransformer implements ViewPager.PageTransformer {
         private static final float MIN_SCALE = 0.85f;
         private static final float MIN_ALPHA = 0.5f;
@@ -98,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
 
             } else if (position <= 1) { // [-1,1]
 
-                view.setRotation(360 * position);
+                //view.setRotation(360 * position);
 
 
 
@@ -109,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+    */
 
 }
 

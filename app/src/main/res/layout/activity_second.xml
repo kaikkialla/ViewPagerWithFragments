@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity"
+    android:background="@color/colorPrimaryDark">
+
+    <ImageView
+        android:id="@+id/Filters_Button"
+        android:transitionName="banana"
+        android:layout_width="128dp"
+        android:layout_height="256dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="52dp"
+        android:background="@drawable/ic_filter_list_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</RelativeLayout>
